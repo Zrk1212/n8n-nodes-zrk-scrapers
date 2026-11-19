@@ -1,0 +1,61 @@
+{
+	"name": "n8n-nodes-zrk-scrapers",
+	"version": "0.1.0",
+	"description": "n8n node for 9 web scrapers: ATS and Workday jobs, PageSpeed audits, UK new companies, TikTok transcripts, Luma organizers, Google Hotels prices, Google Ads Transparency, Telegram channels. Runs on Apify.",
+	"license": "MIT",
+	"homepage": "https://github.com/Zrk1212/n8n-nodes-zrk-scrapers",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"apify",
+		"scraper",
+		"jobs",
+		"tiktok",
+		"telegram",
+		"pagespeed",
+		"google-hotels",
+		"google-ads",
+		"companies-house",
+		"luma"
+	],
+	"author": {
+		"name": "Zrk1212",
+		"email": "Zrk1212@users.noreply.github.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Zrk1212/n8n-nodes-zrk-scrapers.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/ZrkScrapersApifyApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/ZrkScrapers/ZrkScrapers.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.39.4",
+		"prettier": "3.8.3",
+		"release-it": "20.2.0",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
